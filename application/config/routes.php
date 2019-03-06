@@ -1,56 +1,58 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-| -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.
-|
-| Typically there is a one-to-one relationship between a URL string
-| and its corresponding controller class/method. The segments in a
-| URL normally follow this pattern:
-|
-|	example.com/class/method/id/
-|
-| In some instances, however, you may want to remap this relationship
-| so that a different class/function is called than the one
-| corresponding to the URL.
-|
-| Please see the user guide for complete details:
-|
-|	https://codeigniter.com/user_guide/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
-|
-| There are three reserved routes:
-|
-|	$route['default_controller'] = 'welcome';
-|
-| This route indicates which controller class should be loaded if the
-| URI contains no data. In the above example, the "welcome" class
-| would be loaded.
-|
-|	$route['404_override'] = 'errors/page_missing';
-|
-| This route will tell the Router which controller/method to use if those
-| provided in the URL cannot be matched to a valid route.
-|
-|	$route['translate_uri_dashes'] = FALSE;
-|
-| This is not exactly a route, but allows you to automatically route
-| controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
-| When you set this option to TRUE, it will replace ALL dashes in the
-| controller and method URI segments.
-|
-| Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
-*/
-$route['default_controller'] = 'welcome';
+
+// ------------------------------------------------------------
+// $route['default_controller'] = 'admin/index';
+// $route['principal'] = 'Welcome/index';
+$route['prueba'] = 'Probar/index';
+
+
+// --------------------------------------------------------------------------------------
+// Rutas destinadas al frontend
+$route['welcome'] = 'invitado/Welcome/index';
+$route['obra'] = 'invitado/ObraSocial/index';
+$route['quienesSomos'] = 'invitado/Quienessomos/index';
+$route['contacto'] = 'invitado/Contacto/index';
+
+// login de usuario
+$route['IniciarSesion'] ='invitado/IniciarSesion/index';
+$route['registrado'] = 'login/Auth/index';
+$route['auth'] = 'login/Auth/login';
+$route['cerrar'] = 'login/Auth/cerrar';
+$route['Login'] = 'invitado/loginUsuario/index';
+
+// Registro de pacientes
+// $route['registroPaciente'] = 'invitado/RegistroPaciente/index';
+// $route['verificarRegistro'] = 'invitado/RegistroPaciente/registrarUsuario';
+$route['altaPaciente'] = 'invitado/Alta_paciente/index';
+$route['registroPaciente'] = 'invitado/Alta_paciente/registrarUsuario';
+
+// Rutas destindas al usuario registrado Medico y secretaria // Paneles Principal 
+$route['admin'] = 'registrado/Administrador/index';
+$route['adminSec'] = 'registrado/AdministradorSEC/index';
+$route['lista'] = 'Administrador/ListaPacientes/index';
+$route['listaSecretaria'] = 'Administrador/ListaSecretaria/index';
+$route['AgregarSecretaria'] = 'Administrador/Secretaria/agregarSecretaria';
+$route['view'] = 'Administrador/Secretaria/view';
+
+
+
+
+
+
+// Rutas destindas al usuario Paciente
+
+$route['paciente'] = 'registrado/Paciente/index';
+
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['ejemplo'] = 'Examples/index';
+$route['ejemplo'] = 'RegistroPacientes/index';
+// $route['registro'] = 'registroPacientes/index';
+
+
+// agregar las rutas nombre / controlador/metodo 
