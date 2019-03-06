@@ -1,0 +1,50 @@
+﻿.frase{
+  text-shadow: grey 0.1em 0.1em 0.2em;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: #660066;
+}
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    opacity: 0.9;
+}
+
+footer{
+    background-color: #3f3f3f;
+    color: white;
+    padding: 25px;
+    opacity: 0.9;
+    font-family: Montserrat, sans-serif;
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 15px !important;
+}
+
+.jumbotron {
+    color: white;
+    background-image: url("/tercera_parte/assets/img/pedal.jpg");
+    background-color: #003366;
+    margin-bottom: 0;
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.carousel{
+     background: #4d4d4d;
+}
+
+.d-block{
+    margin: 0 auto;
+}
