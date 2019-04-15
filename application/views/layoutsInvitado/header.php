@@ -30,6 +30,9 @@
 
       <link rel="stylesheet" href="<?= base_url()?>assets/font-awesome/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="<?= base_url()?>assets/formulario_css/bootstrap.min.css">
+
+
       <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
@@ -41,8 +44,9 @@
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-                     <h6 class="text-uppercase">Dra. Teresita Santillán</h6>
-                     <h6 class="text-uppercase">Dermatóloga</h6>
+                    <!--  <h6 class="text-uppercase">Dra. Teresita Santillán</h6>
+                     <h6 class="text-uppercase">Dermatóloga</h6> -->
+                     <a href="<?php echo base_url();?>invitado/Welcome"><img src="<?=base_url()?>assets/estilos/img/logoTS2.png" alt="" title="" /></a>  
                 </div>
 
 

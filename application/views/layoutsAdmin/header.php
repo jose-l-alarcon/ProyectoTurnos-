@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="<?= base_url()?>assets/template/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
  <link rel="stylesheet" href="<?= base_url()?>assets/template/Ionicons/css/ionicons.min.css">
+
+
+
   <!-- Theme style -->
  <link rel="stylesheet" href="<?= base_url()?>assets/template/dist/css/AdminLTE1.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -22,14 +25,16 @@
 
  <link rel="stylesheet" href="<?= base_url()?>assets/template/datatables.net-bs/css/dataTables.bootstrap.min.css">
 
+ <!-- estilos para reportes exel y pdf  -->
+ <link rel="stylesheet" href="<?= base_url()?>assets/dataTables-export/css/buttons.dataTables.min.css">
+   
 
  <link rel="stylesheet" href="<?base_url()?>assets/template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
+
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
  </head>
@@ -66,7 +71,10 @@
 
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="<?php echo base_url();?>login/Auth/cerrar" class="btn btn-default btn-flat">Cerrar sesión</a>
+                <!--   <a href="<?php echo base_url();?>login/Auth/cerrar" class="btn btn-default btn-flat">Cerrar sesión</a> 
+ -->
+                  <button type="button" class="btn btn-success" onclick="cerrarSesion()">Cerrar sesión</button> 
+    
                 </div>
               </li>
             </ul>
@@ -76,3 +84,16 @@
       </div>
     </nav>
   </header>
+
+<script>
+  function cerrarSesion() {
+    var result = confirm('¿Desea cerrar sesión?');
+    if(result) {
+
+     window.location.replace("<?php echo base_url('login/Auth/cerrar') ?>");
+
+    }else{
+      return false; // cancela al acción
+    }
+  }
+</script>

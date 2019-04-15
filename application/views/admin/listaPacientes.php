@@ -3,7 +3,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Lista de Pacientes
+        Lista 
+         <small>Pacientes</small> 
       </h1>
     </section>
 
@@ -38,9 +39,14 @@
           </thead>
 
           <tbody>  
-            <?php if(!empty($listaPacientes)):?>
+            <?php if(!empty($listaPacientes)):
+
+
+              ?>
+            
+  
             <?php foreach($listaPacientes as $listaPaciente):?>
-            <tr>
+            <tr>   
               <td><?php echo $listaPaciente->idpaciente; ?></td>
               <td><?php echo $listaPaciente->apellido; ?></td>
               <td><?php echo $listaPaciente->nombre; ?></td>

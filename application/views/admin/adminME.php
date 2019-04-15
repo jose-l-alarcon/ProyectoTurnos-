@@ -38,7 +38,10 @@
           </thead>
 
           <tbody>  
-            <?php if(!empty($listaPacientes)):?>
+            <?php if(!empty($listaPacientes)):
+
+
+              ?>
             <?php foreach($listaPacientes as $listaPaciente):?>
             <tr>
               <td><?php echo $listaPaciente->idpaciente; ?></td>

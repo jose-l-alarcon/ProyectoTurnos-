@@ -34,7 +34,7 @@ class ListaSecretaria extends CI_Controller {
                     }
                     elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 2)) 
                      {
-               $this->load->view("layoutsSecretaria/headerSE");
+                    $this->load->view("layoutsSecretaria/headerSE");
             		$this->load->view("layoutsSecretaria/asideSE");  
             		$this->load->view("admin/listaSecretaria",$data);
             		$this->load->view("layoutsSecretaria/footerSE");  
@@ -42,7 +42,7 @@ class ListaSecretaria extends CI_Controller {
                  
                     elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
                     {
-                    $this->load->view("pacienteRegistrado/paciente_index");
+                    $this->load->view("pacienteRegistrado/solicitarTurno");
             	    }
                     
 
@@ -57,7 +57,45 @@ class ListaSecretaria extends CI_Controller {
 
 
 
-  
+             public function index2()
+                    {
+
+                  $data = array (
+                    'listaSecretaria' =>  $this->ListaSecretaria_model->getListaSecretariaInactivos(), 
+                    );
+
+
+                 if (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 1 )) {
+                    $this->load->view("layoutsAdmin/header");
+                    $this->load->view("layoutsAdmin/aside");  
+                    $this->load->view("admin/listaSecretariaInactivos",$data);
+                    $this->load->view("layoutsAdmin/footer");
+                  
+                    }
+                    elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 2)) 
+                     {
+                    $this->load->view("layoutsSecretaria/headerSE");
+                    $this->load->view("layoutsSecretaria/asideSE");  
+                    $this->load->view("admin/listaSecretaria",$data);
+                    $this->load->view("layoutsSecretaria/footerSE");  
+                    }
+                 
+                    elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
+                    {
+                    $this->load->view("pacienteRegistrado/solicitarTurno");
+                    }
+                    
+
+
+                     else {
+                    $this->load->view("layoutsAdmin/header");
+                    $this->load->view("layoutsAdmin/aside");  
+                    $this->load->view("admin/listaSecretaria");
+                    $this->load->view("layoutsAdmin/footer");  
+                        }
+                         }
+
+
 
 
 

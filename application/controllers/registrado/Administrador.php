@@ -9,24 +9,53 @@ class Administrador extends CI_Controller {
 
         if (!$this->session->userdata('login')) {
         // si los datos son falsos redireccionar 
-        redirect(base_url()."invitado/IniciarSesion");
+        redirect(base_url()."invitado/loginUsuario");
         }
         $this->load->model("ListaPacientes_model"); 
+        $this->load->model("ListaSecretaria_model"); 
   
       }
 
-	public function index()
+	     public function index()
      
 
         {
-  
-    $data = array (
+
+         
+
+        $data = array (
         'listaPacientes' =>  $this->ListaPacientes_model->getListaPacientes(), 
-        );      
+        );
+
+        $data1 = array (
+        'listaSecretaria' =>  $this->ListaSecretaria_model->getListaSecretaria(), 
+        );
+    
+        // return $diff;
+          // print_r($diff
+         // $array = json_decode( json_encode( $data ), true );
+         // $array1=  json_decode( json_encode( $data1 ), true );
+         //  print_r($array);
+         //    echo "</br>"; 
+         //  print_r($array1);
+         //  echo "</br>";
+        
+        
+         //  print_r($myJSON);
+
+          // print_r($data1);
+          // echo "</br>";
+          // print_r($data);
+          // echo "</br>";
+
+          // print_r($result);
+
+     
      if (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 1)) {
-        $this->load->view("layoutsAdmin/header");
+
+    $this->load->view("layoutsAdmin/header");
 		$this->load->view("layoutsAdmin/aside");  
-		$this->load->view("admin/listaPacientes",$data);
+		$this->load->view("admin/listaPacientes",$data,$data1);
 		$this->load->view("layoutsAdmin/footer");
       
         }
@@ -40,7 +69,7 @@ class Administrador extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
         {
-        $this->load->view("pacienteRegistrado/paciente_index");
+     $this->load->view("pacienteRegistrado/solicitarTurno");
 	    }
         
 
@@ -51,4 +80,5 @@ class Administrador extends CI_Controller {
 		$this->load->view("layoutsInvitado/footer");  
 	    }
 	}
-} 
+ 
+}

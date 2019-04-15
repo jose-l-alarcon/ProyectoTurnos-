@@ -16,18 +16,21 @@
 
       <!-- End banner Area -->
   <!-- Start feature Area -->
-      <section class="feature-area section-gap">
+    <!--   <section class="feature-area section-gap">
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-8">
               <div class="title text-center">
                 <h1 class="mb-10">Teresita Santillán </h1>
-                <p>Médica especialista en Dermatología</p>
+             
               </div>
-            </div>
-          </div>     
 
-    <section class="home-about-area section-gap relative">      
+
+
+            </div>
+          </div>      -->
+
+    <!-- <section class="home-about-area section-gap relative">      
         <div class="container">
           <div class="row align-items-center justify-content-end">
             <div class="col-lg-6 no-padding home-about-right">
@@ -49,10 +52,42 @@ Integrante del Grupo de Trabajo de Dermatología Estética, Láser y otras Te
           
             </div>
           </div>
-      </section>
+      </section> -->
+
+      <div class="whole-wrap">
+        <div class="container">
+          <div class="section-top-border">
+            <h3>Teresita Santillán</h3>
+
+            <p>Médica especialista en Dermatología</p>
+            <br/>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="<?=base_url()?>assets/estilos/img/footer.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-md-9 mt-sm-20 left-align-p">
+                <ul class="unordered-list">
+                    <li>  Título de Médica otorgado por la Facultad de Ciencias Médicas de la Universidad Nacional de La Plata, 2002. </li>
+                    <li>Título de Médica Especialista en Dermatología otorgado por el Ministerio de Salud de la Nación Argentina, 2008.</li>
+                    <li>Título de Médica Especialista en Dermatología otorgado por el Colegio de Médicos de la Provincia de Bs As Distrito X. </li>
+                    <li>Jefatura de Residentes especialidad de Dermatología, 2007- 2008.</li>
+                    <li>Asistente a la Unidad de Dermatología del Hospital Municipal Dr Leónidas Lucero, 2009 - 2012.</li>
+                    <li> Integrante del Grupo de Trabajo y estudio en tricología (enfermedades de pelo) de la Sociedad Argentina de Dermatología.</li>
+                    <li>Asistente a la Unidad de Dermatología del Hospital Municipal Dr Leónidas Lucero, 2009 - 2012.</li>
+                    <li> Integrante del Grupo de Trabajo de Fototerapia de la Sociedad Argentina de Dermatología.</li>
+                     <li>  Integrante del Grupo de Trabajo de Dermatología Estética, Láser y otras Tecnologías de la Sociedad Argentina de Dermatología.</li>
+
+                     
+                  </ul>
+
+              </div>
+            </div>
+          </div>
 
             </div>              
           </div>
+
+
         </div>  
       </section>
       

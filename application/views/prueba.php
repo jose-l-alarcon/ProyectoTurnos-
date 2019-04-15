@@ -1,70 +1,151 @@
-<!-- Material form register -->
-<section class="banner-area relative about-banner" id="home"> 
-        <div class="overlay overlay-bg"></div>
-        <div class="container">       
-          <div class="row d-flex align-items-center justify-content-center">
-            <div class="about-content col-lg-12">
-              <h1 class="text-white">
-               Usuarios     
-              </h1> 
-              <p class="text-white link-nav"><a href="<?php echo base_url();?>invitado/IniciarSesion">Iniciar sesión </a>  <span class="fa fa-arrows-h"></span>  <a href="<?php echo base_url();?>invitado/RegistroPaciente"> Crear cuenta </a></p>
-            </div>  
-          </div>
-        </div>
-      </section>
+<!DOCTYPE html>
+<html>
 
-<section>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/registroEstilos2.css">
+    <title>Solicitar Turno</title>
 
-<div class="container-contact100">
-        <div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+<!-- estilos para opcion 1  -->
+    <!-- calendario  -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
 
-        <div class="wrap-contact100">
-            <div class="contact100-form-title" style="background-image: url(images/bg-01.jpg);">
-                <span class="contact100-form-title-1">
-                    Contact Us
-                </span>
+<!-- estilos para opcion 2  -->
+    <!-- hora  -->
+     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/default.css">
 
-                <span class="contact100-form-title-2">
-                    Feel free to drop us a line below!
-                </span>
+      <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/default.time.css">
+
+
+         </head>
+<body>
+    <div class="container" id="advanced-search-form">
+        <h2><strong>Prueba</strong>: <small>Solicitar turno</small> </h2>
+        <strong><u>Datos del Turno</u></strong>
+        <br/>
+        <br/>
+
+
+
+<!-- 
+        <form action="<?php echo base_url();?>registrado/Alta_turno/registrarTurno" method="post"> -->
+        <!-- ---------------------------------------------- -->
+            
+            <div class="form-group">
+            <label for="apellido">Nombre paciente</label>
+            <input type="text" class="form-control"  name="nombre">
+
+            <label for="descripcion">Motivo de la consulta*</label>
+             <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Introducir mensaje" onblur="this.placeholder= 'Introducir mensaje'"> </textarea>
+            </div>
+          
+
+<!-- --------------------------------------------------------------------------          -->
+          <form action="<?php echo current_url();?>" method="post">
+
+              <div class="form-group has-feedback">
+                 <label class="control-label requiredField" for="date">
+                   Fecha
+                   <span class="asteriskField">
+                    *
+                   </span>
+                  </label>
+
+                  <div class="input-group">
+                 <div class="input-group-addon">
+                 <i class="glyphicon glyphicon-calendar">
+                 </i>
+                 </div>
+              <input class="form-control" name="fecha" id="datepicker" type="text" readonly="readonly">
+          <!--     alue="<?php echo !empty(fecha) ? $fecha:'';?>" -->
+                </div>
+             </div>
+           
+            <div class="form-group">
+             <button type="submit" name="buscar" value="Buscar" class="btn btn-primary btn-sm">disponibles</button>
             </div>
 
-            <form class="contact100-form validate-form">
-                <div class="wrap-input100 validate-input" data-validate="Name is required">
-                    <span class="label-input100">Full Name:</span>
-                    <input class="input100" type="text" name="name" placeholder="Enter full name">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <span class="label-input100">Email:</span>
-                    <input class="input100" type="text" name="email" placeholder="Enter email addess">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate="Phone is required">
-                    <span class="label-input100">Phone:</span>
-                    <input class="input100" type="text" name="phone" placeholder="Enter phone number">
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                    <span class="label-input100">Message:</span>
-                    <textarea class="input100" name="message" placeholder="Your Comment..."></textarea>
-                    <span class="focus-input100"></span>
-                </div>
-
-                <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                        <span>
-                            Submit
-                            <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
             </form>
-        </div>
+<!-- ----------------------------------------------------------------------------------------- -->
+           
+ <div class="row">
+      
+      <div class="col-md-6 ">
+
+        <table id="example1" class="table table-bordered btn-hover">
+          
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>hora</th>
+            </tr>
+          </thead>
+
+          <tbody>  
+            <?php if(!empty($listaTurno)):?>
+
+            <?php foreach($listaTurno as $listaTurno):?>
+            <tr>   
+              <td><?php echo $listaTurno->id_hora; ?></td>
+              <td><?php echo $listaTurno->descripcion ?></td>
+           </tr>
+
+            <?php endforeach; ?>
+            <?php endif; ?>
+          </tbody>
+
+        </table>
+
+    </div>
+  </div>
+           
+             <!-- <button type="submit" class="btn btn-success btn-lg">Guardar</button>
+            
+        </form> -->
+
     </div>
 
+<!-- ---------- script calendario ---------------------- -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- --------------------------------------------------------   -->
 
-</section>
+<!--script hora----- -->
+ <script src="<?= base_url()?>assets/js/picker.js"></script>
+ <script src="<?= base_url()?>assets/js/picker.time.js"></script>
+<!-- -------------------------------------------------- -->
+
+<!-- ------------------js de calendario y hora  -->
+   <script src="<?= base_url()?>assets/js/script6.js"></script>
+  <script src="<?= base_url()?>assets/js/time1.js"></script>
+<!-- ----------------------------------------------------------- -->
+
+<!-- <script>
+jQuery.extend( jQuery.fn.pickatime.defaults, {
+    clear: 'Borrar'
+});
+
+ </script>
+ -->
+
+ <script type = "text/javascript">
+
+  $(documen).ready(function(){
+   
+   $('#datapicker').change(function){
+
+
+   }  
+
+  });
+   
+ </script>
+
+
+</body>
+
+</html>

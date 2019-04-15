@@ -40,7 +40,7 @@ class Auth extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3 )) 
         {
-         echo "hola paciente";
+             $this->load->view("pacienteRegistrado/solicitarTurno");
             }
         else 
         {
@@ -74,16 +74,24 @@ class Auth extends CI_Controller {
        	  $data = array (
            'nombre' => $res->nombre,
            'apellido'=>  $res->apellido,
+           'domicilio' => $res->domicilio,
+           'telefono'  => $res->telefono,
+           'email'  => $res->email,
+           'edad'   => $res->edad,
+           'obra_social' => $res->obra_social,
            'idrol' => $res->idrol,
+           'idpaciente'=> $res->idpaciente,
            'login'=> true 
          );
           
+
      
          $this->session->set_userdata($data);
 
           if ($data['idrol'] == 1) {
-           
            redirect(base_url()."registrado/Administrador");
+
+
 
           }
           else if ($data['idrol'] == 2){
@@ -92,8 +100,9 @@ class Auth extends CI_Controller {
 
           }
           else if ($data['idrol'] == 3)
-          
-            echo "hola paciente";
+            
+         redirect(base_url()."registrado/Turno");
+
           }
         }
 

@@ -9,7 +9,7 @@ class AdministradorSEC extends CI_Controller {
 
         if (!$this->session->userdata('login')) {
         // si los datos son falsos redireccionar 
-        redirect(base_url()."invitado/IniciarSesion");
+        redirect(base_url()."invitado/loginUsuario");
         }
         $this->load->model("ListaPacientes_model"); 
   
@@ -40,7 +40,7 @@ class AdministradorSEC extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
         {
-        $this->load->view("pacienteRegistrado/paciente_index");
+       $this->load->view("pacienteRegistrado/solicitarTurno");
         }
         
 

@@ -3,7 +3,7 @@
       <script src="<?= base_url()?>assets/estilos/js/vendor/jquery-2.2.4.min.js"></script>
       <script src="<?= base_url()?>assets/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="<?= base_url()?>assets/estilos/js/vendor/bootstrap.min.js"></script>      
-      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+     <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script> -->
       <script src="<?= base_url()?>assets/estilos/js/easing.min.js"></script>      
       <script src="<?= base_url()?>assets/estilos/js/hoverIntent.js"></script>
       <script src="<?= base_url()?>assets/estilos/js/superfish.min.js"></script> 
@@ -14,6 +14,13 @@
       <script src="<?= base_url()?>assets/estilos/js/jquery.nice-select.min.js"></script>              
       <script src="<?= base_url()?>assets/estilos/js/mail-script.js"></script> 
       <script src="<?= base_url()?>assets/estilos/js/main.js"></script>  
+
+      <script src="<?= base_url()?>assets/js/formulario_js/boostrap.min.js"></script> 
+      <script src="<?= base_url()?>assets/js/formulario_js/jquery-3.2.1.slim.min.js"></script> 
+
+       <script src="<?= base_url()?>assets/js/formulario_js/popper.min.js"></script>  
+
+
 
 
       <footer class="footer-area section-gap">

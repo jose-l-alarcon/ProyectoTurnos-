@@ -33,7 +33,10 @@
    
       <form action="<?php echo base_url();?>Administrador/Secretaria/update" method="post"> 
 
+    <!-- campo oculto  -->
       <input type="hidden" value="<?php echo $secretaria->idsecretaria;?>" name="idsecretaria">
+
+<!-- ---------------------------------------------- -->
 
         <div class="form-group">
           <label for="apellido">Apellido</label>

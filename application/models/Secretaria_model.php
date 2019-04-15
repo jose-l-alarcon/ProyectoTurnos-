@@ -24,6 +24,12 @@ class Secretaria_model extends CI_Model {
 			    return $this->db->update("secretaria",$data);
 			 
 			}
+
+			 public function eliminarSecretaria ($idsecretaria,$data){
+			    $this->db->where("idsecretaria",$idsecretaria);
+			    return $this->db->update("secretaria",$data);
+			 
+			}
  }
 
 

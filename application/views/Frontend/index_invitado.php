@@ -11,7 +11,34 @@
               <p class="text-white mx-auto">
                 Somos una empresa dedicada a la prestación de servicios relacionados con la medicina estética y la criocirugía en general. Lo invitamos a que disfrute de todo lo que tenemos para ofrecerle. Bienvenido.
               </p>
-              <a href="#" class="primary-btn header-btn text-uppercase mt-10">Turnos online</a>
+             
+                <!--  <a  href="<?php echo base_url();?>registrado/Turno/index" class="primary-btn header-btn text-uppercase mt-10">Turnos online</a> 
+
+
+                 -->
+              <div class="container">   
+              <a  href="#" class="primary-btn header-btn text-uppercase mt-10" data-toggle="modal" data-target="#modal-success">Turnos online</a>
+             
+             <!--  <div class="modal fade" id="ventana1">
+
+                <div class="modal-dialog">
+
+                  <div class="modal-content">
+                    
+
+
+
+                  </div>
+                  
+
+
+                </div>
+                
+
+              </div> -->
+
+            </div>
+             
             </div>                      
           </div>
         </div>
@@ -24,20 +51,20 @@
           <div class="row justify-content-center">
             <div class="col-lg-12 open-hour-wrap">
               <h1>Horarios de atención</h1> <br/>
-              <a class="open-btn" href="#"> <span class="circle"></span>Turnos Online</a>
+              <a class="open-btn" href="<?php echo base_url();?>registrado/Turno/index"> <span class="circle"></span>Turnos Online</a>
               <p>
                 + rápido + fácil + cómodo 
               </p>
               <div class="date-list d-flex flex-row justify-content-center">
                 <ul class="colm-1">
-                  <li>Lunes - Miercoles</li>
-                  <li>Martes - jueves - Viernes</li>
-                  <li>Sabados</li>
+                  <li>Martes-Jueves-Viernes</li>
+                  <li>Sábados</li>
+                 <!--  <li>Sabados</li> -->
                 </ul>
                 <ul class="colm-2">
-                  <li><span>:</span>   10:00am a 12:00pm</li>
-                  <li><span>:</span>   06:00pm a 08:00pm</li>
-                  <li><span>:</span>   10:00am a 12:00am</li>
+                  <li><span>:</span>   18:00 a 20:00hs</li>
+                  <li><span>:</span>   Por orden de llegada</li>
+                 <!--  <li><span>:</span>   10:00am a 12:00am</li> -->
                 </ul>               
               </div>
             </div>
@@ -183,5 +210,29 @@
         </div>  
       </section>
       <!-- End home-about Area -->  
+
+       
+ <div class="modal modal-success fade" id="modal-success">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">¿Como solicitar un turno?</h4>
+              </div>
+              <div class="modal-body">
+                <p>1: Inicie sesión</p>
+                <p>2: Selecione la fecha</p>
+                <p>3: Haga click en buscar horarios</p>
+                <p>4: Confirme el turno</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
 
    

@@ -14,31 +14,45 @@
   <link rel="stylesheet" href="<?= base_url()?>assets/template/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
  <link rel="stylesheet" href="<?= base_url()?>assets/template/Ionicons/css/ionicons.min.css">
+
+ <!-- estilos para reportes exel y pdf  -->
+ <link rel="stylesheet" href="<?= base_url()?>assets/dataTables-export/css/buttons.dataTables.min.css">
+   
+
+ <link rel="stylesheet" href="<?base_url()?>assets/template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+
+
+
   <!-- Theme style -->
- <link rel="stylesheet" href="<?= base_url()?>assets/template/dist/css/AdminLTE.min.css">
+ <link rel="stylesheet" href="<?= base_url()?>assets/template/dist/css/AdminLTE1.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
  <link rel="stylesheet" href="<?= base_url()?>assets/template/dist/css/skins/_all-skins.min.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+ <link rel="stylesheet" href="<?= base_url()?>assets/template/datatables.net-bs/css/dataTables.bootstrap.min.css">
+
+ <!-- estilos para reportes exel y pdf  -->
+ <link rel="stylesheet" href="<?= base_url()?>assets/dataTables-export/css/buttons.dataTables.min.css">
+   
+
+ <link rel="stylesheet" href="<?base_url()?>assets/template/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
+
+
+ </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<!-- Site wrapper -->
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+   <a href="../../index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>A</b>D</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Administrador</b></span>
     </a>
@@ -47,25 +61,16 @@
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
 
-
-<!-- ----------------------------------------------------------------------------------------------- -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-        
-        
-        
-               
+
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="<?= base_url()?>assets/estilos/img/avatar.png" class="user-image">
-              <span class="hidden-xs"><?php echo  $this->session->userdata("nombre").''. $this->session->userdata("apellido")?> </span>
+              <span class="hidden-xs"><?php echo  $this->session->userdata("nombre")?> </span>
             </a>
 
             <ul class="dropdown-menu">

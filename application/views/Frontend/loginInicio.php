@@ -6,6 +6,7 @@
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/styles1.css">
+
    
 
 </head>
@@ -21,6 +22,7 @@
             </di>
             <br/>
             <h4 style="color:#1E88E5">Iniciar sesión</h4>
+               
 
             <form action="<?php echo base_url();?>login/auth/login" method="post">
                 
@@ -29,12 +31,12 @@
                     <input type="email" class="form-control" name="email" id="email" required="" autofocus="">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
+                    <label for="password">Contraseña:</label>
                     <input type="password" class="form-control" name="password" id="password" required="" autofocus="">
                 </div>
 
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-lg">Ingresar</button>
+           <div class="form-group">
+                    <button type="submit" id="alerta" class="btn btn-success btn-lg"  >Ingresar</button>
 
                     <a href="<?php echo base_url();?>invitado/Welcome/index" style="float:right">Volver a inicio</a> 
                 </div>
@@ -57,8 +59,8 @@
                             </form>
                         </div>
                     </div>
-              
-
+           
+            
                 </body>
 
                 </html>

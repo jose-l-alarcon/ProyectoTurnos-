@@ -19,10 +19,12 @@ class ListaPacientes extends CI_Controller {
 
 	public function index()
         {
+  
 
       $data = array (
         'listaPacientes' =>  $this->ListaPacientes_model->getListaPacientes(), 
         );
+       
 
 
      if (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 1 )) {
@@ -42,7 +44,7 @@ class ListaPacientes extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
         {
-        $this->load->view("pacienteRegistrado/paciente_index");
+        $this->load->view("pacienteRegistrado/solicitarTurno");
 	    }
         
 

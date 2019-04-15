@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/registroEstilos.css"">
-    <title>Registro de pacientes</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/formularioEstilos/registroEstilos.css"">
+            <title>Registro de pacientes</title>
 </head>
 
 <body>
@@ -39,14 +39,19 @@
                 <input type="text" class="form-control" placeholder="Domicilio" name="domicilio" id="domicilio">
             </div>
 
-            <div class="form-group">
-                <label for="obra_social">Obra Social</label>
-                <input type="text" class="form-control" placeholder="Obra social" name="obra_social" id="obra_social">
+               <div class="form-group">
+                <label for="domicilio">Email</label>
+                <input type="text" class="form-control" placeholder="Email" name="email" id="domicilio">
             </div>
 
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="email">
+          <div class="form-group">
+              <label for="sel1">Select list:</label>
+              <select class="form-control" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
             </div>
 
             <div class="form-group">
@@ -60,6 +65,8 @@
             </div>
 
                     <button type="submit" class="btn btn-success btn-lg">Registrarse</button><a href="<?php echo base_url();?>invitado/Welcome/index">Volver a inicio</a><a href="<?php echo base_url();?>invitado/loginUsuario/index" style="float:right">Iniciar sesión</a> 
+
+                    
          
         </form>
     </div>

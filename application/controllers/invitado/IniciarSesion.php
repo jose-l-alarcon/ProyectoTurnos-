@@ -36,7 +36,7 @@ class IniciarSesion extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('nombre')) == 3)) 
         {
-         $this->load->view("pacienteRegistrado/paciente_index");
+         $this->load->view("pacienteRegistrado/solicitarTurno");
 	    }
         
         else 

@@ -39,7 +39,7 @@ class Contacto extends CI_Controller {
      
         elseif (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 3)) 
         {
-         $this->load->view("pacienteRegistrado/paciente_index");
+          $this->load->view("pacienteRegistrado/solicitarTurno");
             }
         
         else 

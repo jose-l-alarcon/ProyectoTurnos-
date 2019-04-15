@@ -7,9 +7,20 @@ class ListaSecretaria_model extends CI_Model {
 
  public function getListaSecretaria(){
  
- $this->db->where("estado","1");
- $resultado = $this->db->get("secretaria");
- return $resultado->result();
+$this->db->select('*');
+ $this->db->from('secretaria');
+ $this->db->where('estado', "1");
+ $query= $this->db->get();
+ return $query->result();
+}
+
+public function getListaSecretariaInactivos(){
+ 
+$this->db->select('*');
+ $this->db->from('secretaria');
+ $this->db->where('estado', "0");
+ $query= $this->db->get();
+ return $query->result();
 }
 
 }

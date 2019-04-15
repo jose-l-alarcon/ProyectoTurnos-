@@ -114,18 +114,79 @@ class Secretaria extends CI_Controller {
 
 
 
-       public function view($idsecretaria) {
+    
+        
+             public function delete ($idsecretaria) {
 
-           $data = array (
-            'secretaria' =>  $this->Secretaria_model->editarSecretaria($idsecretaria), 
+              $data = array (
+                 'secretaria' =>  $this->Secretaria_model->editarSecretaria($idsecretaria), 
               );
- 
-              
 
-              $this->load->view("admin/modal_Secretaria",$data);
-            
-              }
+                 $this->load->view("layoutsAdmin/header");
+                  $this->load->view("layoutsAdmin/aside");  
+                  $this->load->view("admin/eliminarSecretaria",$data);
+                  $this->load->view("layoutsAdmin/footer");  
 
+               }
+
+                public function eliminar ($idsecretaria) {
+
+                 $idsecretaria = $this->input->post("idsecretaria");
+    
+                  $data = array (
+                  'estado' => 0,
+                 );
+
+                 if  ($this->Secretaria_model->eliminarSecretaria($idsecretaria,$data)) {
+                      redirect(base_url()."Administrador/ListaSecretaria/index");
+                        
+                      }
+
+                 else {
+                        // si los datos son falsos 
+                    $this->session->set_flashdata("error", "No se puede actualizar la información
+                      ");
+                     redirect(base_url()."Administrador/Secretaria/editarSecretaria/". $idsecretaria);
+                     } 
+
+               }
+
+
+
+             public function altaSecretaria ($idsecretaria) {
+
+              $data = array (
+                 'secretaria' =>  $this->Secretaria_model->editarSecretaria($idsecretaria), 
+              );
+
+                 $this->load->view("layoutsAdmin/header");
+                  $this->load->view("layoutsAdmin/aside");  
+                  $this->load->view("admin/altaSecretaria",$data);
+                  $this->load->view("layoutsAdmin/footer");  
+
+               }
+
+               public function altaSistema ($idsecretaria) {
+
+                 $idsecretaria = $this->input->post("idsecretaria");
+    
+                  $data = array (
+                  'estado' => 1,
+                 );
+
+                 if  ($this->Secretaria_model->eliminarSecretaria($idsecretaria,$data)) {
+                      redirect(base_url()."Administrador/ListaSecretaria/index");
+                        
+                      }
+
+                 else {
+                        // si los datos son falsos 
+                    $this->session->set_flashdata("error", "No se puede actualizar la información
+                      ");
+                     redirect(base_url()."Administrador/Secretaria/editarSecretaria/". $idsecretaria);
+                     } 
+
+               }
                
 
 

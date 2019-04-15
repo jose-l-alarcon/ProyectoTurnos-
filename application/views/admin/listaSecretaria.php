@@ -3,7 +3,7 @@
     <section class="content-header">
       <h1>
         Usuario 
-        <small> Secretaria</small>
+        <small> Secretaria (Activos)</small>
       </h1>
     </section>
 
@@ -56,7 +56,7 @@
                      
                      <a href="<?php echo base_url()?>Administrador/Secretaria/edit/<?php echo $listaSecretaria->idsecretaria;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
 
-                    <a href="" class="btn btn-danger"><span class="fa fa-remove"></span></a>
+                     <a href="<?php echo base_url()?>Administrador/Secretaria/delete/<?php echo $listaSecretaria->idsecretaria;?>" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
                     </div>  
                 </td>
            </tr>
@@ -69,6 +69,7 @@
       </div>
     </div>
 
+<!-- -------------------------- row -->
     </div>
 
     </div>
