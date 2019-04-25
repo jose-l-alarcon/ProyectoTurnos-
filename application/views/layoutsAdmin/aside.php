@@ -64,7 +64,7 @@
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url();?>reportes/reporte_paciente/index"><i class="fa fa-circle-o"></i>Pacientes</a></li>
             <li><a href="<?php echo base_url();?>reportes/reporte_turno/index"><i class="fa fa-circle-o"></i>Turnos</a></li>
-            <li><a href="<?php echo base_url();?>reportes/reporte_grafico/index"><i class="fa fa-circle-o"></i>Gráficas</a></li>
+            <!-- <li><a href="<?php echo base_url();?>reportes/reporte_grafico/index"><i class="fa fa-circle-o"></i>Gráficas</a></li> -->
           </ul>
         </li>
      

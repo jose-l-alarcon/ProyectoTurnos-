@@ -25,8 +25,7 @@ $route['cerrar'] = 'login/Auth/cerrar';
 $route['Login'] = 'invitado/loginUsuario/index';
 
 // Registro de pacientes
-// $route['registroPaciente'] = 'invitado/RegistroPaciente/index';
-// $route['verificarRegistro'] = 'invitado/RegistroPaciente/registrarUsuario';
+
 $route['altaPaciente'] = 'invitado/Alta_paciente/index';
 $route['registroPaciente'] = 'invitado/Alta_paciente/registrarUsuario';
 
@@ -62,8 +61,7 @@ $route['turnoAcancelar'] = 'registrado/Turnos_paciente/delete';
 
 $route['confirmar'] = 'registrado/CI_confirmarturno/confirmarTurno_modificar';
 $route['modificarPaciente'] = 'registrado/Modificar_datosPacientes/edit';
-
-
+$route['modificarPaciente'] = 'registrado/Modificar_datosPacientes/edit1';
 
 // reportes 
 $route['reporte_paciente'] = 'reportes/reporte_paciente/index';

@@ -95,7 +95,7 @@
     </div>
     &nbsp;&nbsp;&nbsp;
 
-      <a href="<?php echo base_url()?>registrado/Modificar_datosPacientes/edit/<?php echo $this->session->userdata("idpaciente");?>" class="btn btn-success btn-flat" role="button">Actualizar contraseña</a> &nbsp;
+      <a href="<?php echo base_url()?>registrado/Modificar_datosPacientes/edit1/<?php echo $this->session->userdata("idpaciente");?>" class="btn btn-success btn-flat" role="button">Actualizar contraseña</a> &nbsp;
  
 
      <a href="<?php echo base_url()?>registrado/Modificar_datosPacientes/edit/<?php echo $this->session->userdata("idpaciente");?>" class="btn btn-success btn-flat" role="button">Actualizar datos</a>

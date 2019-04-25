@@ -49,34 +49,53 @@
         </div>
         
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("edad") != false ? 'has-error':'';?>">
           <label for="nombre">Edad</label>
-          <input type="text" class="form-control" name="edad" id="nombre" value="<?php echo $paciente->edad;?>">
+          <input type="text" class="form-control" name="edad" id="nombre" value="<?php echo form_error("edad") !=false ? set_value("edad") : $paciente->edad;?>">
+
+          <?php echo form_error("edad","<span class='help-block'>","</span>");?> 
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("domicilio") != false ? 'has-error':'';?>">
           <label for="direccion">Dirección</label>
-          <input type="text" class="form-control" name="domicilio" id="direccion" value="<?php echo $paciente->domicilio;?>" required>
+          <input type="text" class="form-control" name="domicilio" value="<?php echo form_error("domicilio") !=false ? set_value("domicilio") : $paciente->domicilio;?>">
+
+          <?php echo form_error("domicilio","<span class='help-block'>","</span>");?> 
         </div>
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("telefono") != false ? 'has-error':'';?>">
           <label for="telefono">Teléfono</label>
-          <input type="text" class="form-control" name="telefono" id="telefono" value="<?php echo $paciente->telefono;?>">
+          <input type="text" class="form-control" name="telefono" value="<?php echo form_error("telefono") !=false ? set_value("telefono") : $paciente->telefono;?>">
+          <?php echo form_error("telefono","<span class='help-block'>","</span>");?> 
         </div>
 
         <div class="form-group">
           <label for="telefono">Obra social</label>
-          <input type="text" class="form-control" name="obra_social" id="telefono" value="<?php echo $paciente->obra_social;?>">
+           <select class="form-control select2" name="obra_social" style="width: 100%;" required >
+            <option value="<?php echo $paciente->obra_social;?>"><?php echo $paciente->obra_social;?></option>
+            <option value="Particular">Particular</option>
+            <option value="Omint">Omint</option>
+            <option value="Sancor Salud">Sancor Salud</option>
+            <option value="Swiss Medical">Swiss Medical</option>
+            <option value="Medifé">Medifé</option>
+            <option value="Osde">Osde</option>
+            <option value="Unión Personal">Unión Personal</option>
+            <option value="Ioscor">Ioscor</option>
+            <option value="Osecac">Osecac</option>
+            <option value="SPS Salud">SPS Salud</option>
+          </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("email") != false ? 'has-error':'';?>">
           <label for="email">E-mail</label>
-          <input type="email" class="form-control" name="email" id="email" value="<?php echo $paciente->email;?>" requered>
+          <input type="email" class="form-control" name="email" value="<?php echo form_error("email") !=false ? set_value("email") : $paciente->email;?>">
+
+          <?php echo form_error("email","<span class='help-block'>","</span>");?> 
         </div>
 
         <div class="form-group">
-          <button type="submit" id="alerta" class="btn btn-success btn-flat">Guardar cambios</button>
+          <button type="submit" class="btn btn-success btn-flat">Guardar cambios</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:#FF0000";>Importante: sus datos se actualizaran una vez que cierre sesión y vuelva a inciar.</small> 
         </div>
         </di>
       </form>

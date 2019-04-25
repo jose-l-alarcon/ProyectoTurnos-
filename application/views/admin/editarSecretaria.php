@@ -40,37 +40,42 @@
 
         <div class="form-group">
           <label for="apellido">Apellido</label>
-          <input type="text" class="form-control" name="apellido" value="<?php echo $secretaria->apellido;?>" >
+          <input type="text" class="form-control" name="apellido" value="<?php echo $secretaria->apellido;?>" readonly="readonly"  >
         </div> 
           
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $secretaria->nombre;?>">
+          <input type="text" class="form-control" name="nombre" id="nombre" value="<?php echo $secretaria->nombre;?>" readonly="readonly" >
         </div>
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("direccion") != false ? 'has-error':'';?>">
           <label for="direccion">Dirección</label>
-          <input type="text" class="form-control" name="direccion" id="direccion" value="<?php echo $secretaria->direccion;?>">
+          <input type="text" class="form-control" name="direccion" id="direccion" value="<?php echo form_error("direccion") !=false ? set_value("direccion") : $secretaria->direccion;?>">
+            <?php echo form_error("direccion","<span class='help-block'>","</span>");?> 
         </div>
 
-        <div class="form-group">
+        <div class="form-group <?php echo form_error("telefono") != false ? 'has-error':'';?>">
           <label for="telefono">Teléfono</label>
-          <input type="text" class="form-control" name="telefono" id="telefono" value="<?php echo $secretaria->telefono;?>">
+          <input type="text" class="form-control" name="telefono" id="telefono" value="<?php echo form_error("telefono") !=false ? set_value("telefono") : $secretaria->telefono;?>">
+            <?php echo form_error("telefono","<span class='help-block'>","</span>");?>
         </div>
 
-        <div class="form-group">
+        <div  class="form-group <?php echo form_error("email") != false ? 'has-error':'';?>">
           <label for="email">E-mail</label>
-          <input type="email" class="form-control" name="email" id="email" value="<?php echo $secretaria->email;?>">
+          <input type="email" class="form-control" name="email" id="email" value="<?php echo form_error("email") !=false ? set_value("email") : $secretaria->email;?>">
+            <?php echo form_error("email","<span class='help-block'>","</span>");?>
         </div>
 
-        <div class="form-group">
+        <div class="form-group has-danger <?php echo form_error("password") != false ? 'has-error':'';?>">
           <label for="password">Contraseña</label>
-          <input type="password" class="form-control" name="password" id="password" value="<?php echo $secretaria->password;?>">
+          <input type="password" class="form-control" name="password" id="password" value="<?php echo form_error("email") !=false ? set_value("password") : $secretaria->password;?>">
+           <?php echo form_error("password","<span class='help-block'>","</span>");?> 
         </div>
         
-        <div class="form-group">
+        <div class="form-group has-danger <?php echo form_error("password") != false ? 'has-error':'';?>">
           <label for="password">Repetir contraseña</label>
-          <input type="password" class="form-control" name="password2" id="password2" >
+          <input type="password" class="form-control" name="password2" id="password2" value="<?php echo form_error("email") !=false ? set_value("password") : $secretaria->password;?>">
+           <?php echo form_error("password","<span class='help-block'>","</span>");?> 
         </div>
 
         <div class="form-group">

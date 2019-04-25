@@ -17,6 +17,25 @@
    <div class="box box-solid">
      <div class="box-body">
        <div class="row">
+
+
+         <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green">
+                                <div class="inner">
+                                    <h3><?php echo $cantidadTurnos;?></sup></h3>
+
+                                    <p>Turnos</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-calendar"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        </div>
+
+                        <hr/>
                     <form action="<?php echo current_url();?>" method="POST" class="form-horizontal">
                         <div class="form-group">
                             <label for="" class="col-md-1 control-label">Fecha:</label>

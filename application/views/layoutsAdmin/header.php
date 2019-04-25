@@ -73,7 +73,7 @@
                 <div class="pull-right">
                 <!--   <a href="<?php echo base_url();?>login/Auth/cerrar" class="btn btn-default btn-flat">Cerrar sesión</a> 
  -->
-                  <button type="button" class="btn btn-success" onclick="cerrarSesion()">Cerrar sesión</button> 
+                 <a href="<?php echo base_url();?>login/Auth/cerrar" class="btn btn-default btn-flat">Cerrar sesión</a>
     
                 </div>
               </li>
@@ -85,7 +85,7 @@
     </nav>
   </header>
 
-<script>
+<!-- <script>
   function cerrarSesion() {
     var result = confirm('¿Desea cerrar sesión?');
     if(result) {
@@ -96,4 +96,4 @@
       return false; // cancela al acción
     }
   }
-</script>
+</script> -->

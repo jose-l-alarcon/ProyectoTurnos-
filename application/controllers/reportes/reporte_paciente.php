@@ -10,6 +10,8 @@ class reporte_paciente extends CI_Controller {
        parent::__construct();
 
         $this->load->model("ListaPacientes_model"); 
+        
+        $this->load->model("Turno_model"); 
   
       }
 
@@ -20,6 +22,7 @@ class reporte_paciente extends CI_Controller {
 
        $data = array (
         'listaPacientes' =>  $this->ListaPacientes_model->getListaPacientes(), 
+        'cantidadPacientes' =>  $this->Turno_model->rowCount("paciente"), 
         );
            
         if (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 1)) {

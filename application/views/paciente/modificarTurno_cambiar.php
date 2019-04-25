@@ -6,7 +6,9 @@
     <section class="content-header">
         <h1>
         Turno
-        <small>Modificar</small>
+        <small>Modificar</small> <br/>
+
+         <small>Paso 1 : Selecione la fecha y hora de la consulta</small>
         </h1>
     </section>
     <!-- Main content -->

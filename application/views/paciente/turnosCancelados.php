@@ -44,7 +44,7 @@
 
                      <a title="Modificar" href="<?php echo base_url()?>registrado/Modificar_turno/modificarTurno/<?php echo $turnosCancelados->idturno;?>" class="btn btn-warning"><span class="fa fa-pencil"></span></a>
 
-                     <a title="Eliminar" href="<?php echo base_url()?>registrado/Turnos_paciente/delete/<?php echo $turnosCancelados->idturno;?>" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
+                     <a title="Cancelar" href="<?php echo base_url()?>registrado/Turnos_paciente/delete/<?php echo $turnosCancelados->idturno;?>" class="btn btn-danger btn-remove"><span class="fa fa-remove"></span></a>
                     </div>  
                 </td>
                

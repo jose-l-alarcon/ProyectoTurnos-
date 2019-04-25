@@ -18,8 +18,24 @@
    
 
 <!-- listado de pacientes -->
-    <hr>
+    
     <div class="row">
+
+       <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua">
+                                <div class="inner">
+                                    <h3><?php echo $cantidadPacientes;?></h3>
+
+                                    <p>Pacientes</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion-android-contact"></i>
+                                </div>
+
+                                <a href="<?php echo base_url();?>Administrador/ListaPacientes" class="small-box-footer">Más información <i class="fa fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
       
       <div class="col-md-12 ">
 

@@ -17,7 +17,7 @@
 
                  -->
               <div class="container">   
-              <a  href="#" class="primary-btn header-btn text-uppercase mt-10" data-toggle="modal" data-target="#modal-success">Turnos online</a>
+              <a  href="<?php echo base_url();?>registrado/Turno/index" class="primary-btn header-btn text-uppercase mt-10">Turnos online</a>
              
              <!--  <div class="modal fade" id="ventana1">
 
@@ -57,13 +57,12 @@
               </p>
               <div class="date-list d-flex flex-row justify-content-center">
                 <ul class="colm-1">
-                  <li>Martes-Jueves-Viernes</li>
-                  <li>Sábados</li>
+                  <li>Lunes a Viernes</li>
+                
                  <!--  <li>Sabados</li> -->
                 </ul>
                 <ul class="colm-2">
                   <li><span>:</span>   18:00 a 20:00hs</li>
-                  <li><span>:</span>   Por orden de llegada</li>
                  <!--  <li><span>:</span>   10:00am a 12:00am</li> -->
                 </ul>               
               </div>

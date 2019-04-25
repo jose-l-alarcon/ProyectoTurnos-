@@ -18,13 +18,16 @@
 <!-- 
       CSS
       =============================================  -->
-      <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/linearicons3.css">
+      <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/linearicons.css">
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/font-awesome.min.css">
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/bootstrap.css">
+
+     
+
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/magnific-popup.css">
       <link rel="stylesheet" href="<?= base_url()?>aassets/estilos/css/nice-select.css">              
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/animate.min.css">
-      <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/jquery-ui.css">      
+      <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/jquery-ui1.css">      
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/owl.carousel.css">
       <link rel="stylesheet" href="<?= base_url()?>assets/estilos/css/main12.css">
 
@@ -33,12 +36,14 @@
       <link rel="stylesheet" href="<?= base_url()?>assets/formulario_css/bootstrap.min.css">
 
 
+
       <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 
     </head>
     <body>  
+
         <header id="header" id="home">
           <div class="header-top">
             <div class="container">
@@ -53,6 +58,7 @@
                 <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
 
                  <a href="<?php echo base_url();?>invitado/loginUsuario/index" class="genric-btn default-border">Iniciar sesión</a>
+             
         
                 </div>
               </div>                  
@@ -65,17 +71,15 @@
                 <ul class="nav-menu">
                   <li><a href="<?php echo base_url();?>invitado/Welcome">Inicio</a></li>
                   <li><a href="<?php echo base_url();?>invitado/Obrasocial">Obras Sociales y Prepagas</a></li>
-                  <li class="menu-has-children"><a href="">Tratamientos</a>
-                    <!-- <ul>
-                      <li><a href="blog-home.html">Blog Home</a></li>
-                      <li><a href="blog-single.html">Blog Single</a></li>
-                    <li class="menu-has-children"><a href="">Level 2</a>
-                      <ul>
-                        <li><a href="#">Item One</a></li>
-                        <li><a href="#">Item Two</a></li>
-                      </ul>
-                    </li>                       
-                    </ul> -->
+
+                <li class="menu-has-children"><a href="">Tratamientos</a>
+                    <ul>
+                      <li><a href="">Blog Home</a></li>
+                      <li><a href="">Blog Single</a></li>
+                    </ul>
+                  </li> 
+
+
                  <li><a href="<?php echo base_url();?>invitado/Quienessomos">Quienes Somos</a></li>                         
                   <li><a href="<?php echo base_url();?>invitado/Contacto">Contacto</a></li>
                 </ul> 

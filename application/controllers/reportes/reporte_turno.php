@@ -30,7 +30,8 @@ class reporte_turno extends CI_Controller {
 
        $data = array (
         'listaturnos' =>  $fechas,
-        'fecha_turno' =>  $fecha_turno
+        'fecha_turno' =>  $fecha_turno,
+        'cantidadTurnos' =>  $this->Turno_model->rowCount("turno")
         );
            
         if (($this->session->userdata('login')) and (($this->session->userdata('idrol')) == 1)) {
